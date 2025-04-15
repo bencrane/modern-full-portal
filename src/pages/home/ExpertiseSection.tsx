@@ -30,12 +30,12 @@ const ExpertiseSection = () => {
         </p>
       </div>
 
-      {/* Grid Section with Debug Outline */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center outline outline-red-500">
+      {/* Responsive Grid Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-center">
         {expertiseItems.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center w-full p-6 bg-zinc-900 border border-zinc-700 rounded-lg text-center hover:shadow-lg transition shadow-sm outline outline-blue-500"
+            className="flex flex-col items-center p-6 bg-zinc-900 border border-zinc-700 rounded-lg text-center hover:shadow-lg transition shadow-sm min-w-[250px]"
           >
             <div className="text-purple-400 text-lg mb-4">◇</div>
             <div className="text-white text-sm font-medium">{item}</div>
@@ -47,3 +47,4 @@ const ExpertiseSection = () => {
 };
 
 export default ExpertiseSection;
+
