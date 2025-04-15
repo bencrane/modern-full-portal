@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Terminal } from 'lucide-react';
 
@@ -15,7 +14,7 @@ const expertiseItems = [
 
 const ExpertiseSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-12 py-28">
+    <section id="expertise" className="max-w-7xl mx-auto px-6 lg:px-12 py-28">
       {/* Header Section */}
       <div className="mb-16 space-y-4">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400">

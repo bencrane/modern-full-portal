@@ -15,7 +15,7 @@ const approaches = [
 
 const ApproachSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
+    <section id="process" className="max-w-7xl mx-auto px-6 py-24">
       <div className="mb-16 space-y-4">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800/50 text-xs font-mono text-zinc-400">
           <Code size={14} className="mr-2 text-purple-400" />
