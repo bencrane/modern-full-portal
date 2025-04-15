@@ -4,6 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Terminal, ServerCog, ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
+  const scrollToSolutions = () => {
+    const section = document.getElementById('solutions');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative">
       <div className="max-w-7xl mx-auto px-6 py-24">
@@ -22,10 +29,14 @@ const HeroSection = () => {
               We architect and implement comprehensive backend solutions, transforming complex technical challenges into streamlined operational systems. No half measures.
             </p>
             <div className="flex items-center gap-4 pt-4">
-              <Button className="premium-button px-6 py-6">
+              <Button className="premium-button px-6 py-6" onClick={() => window.location.href = 'mailto:hello@modernfull.com'}>
                 Talk to Us <ArrowRight className="ml-2" size={16} />
               </Button>
-              <Button variant="outline" className="border-zinc-700 hover:bg-zinc-800 text-zinc-300">
+              <Button 
+                variant="outline" 
+                className="border-zinc-700 hover:bg-zinc-800 text-zinc-300"
+                onClick={scrollToSolutions}
+              >
                 Explore Solutions
               </Button>
             </div>

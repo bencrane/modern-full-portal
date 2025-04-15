@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -39,7 +38,7 @@ const Navbar = () => {
           >
             Expertise
           </Button>
-          <Button size="sm" className="premium-button text-xs font-mono">
+          <Button size="sm" className="premium-button text-xs font-mono" onClick={() => window.location.href = 'mailto:hello@modernfull.com'}>
             Contact Us
           </Button>
         </div>
