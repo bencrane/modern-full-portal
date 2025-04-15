@@ -1,16 +1,41 @@
 
 import React from 'react';
-import { Terminal } from 'lucide-react';
+import { Terminal, Code } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const expertiseItems = [
-  "API Design & Integration",
-  "Event-Driven Architecture",
-  "Cloud Infrastructure",
-  "Authentication Systems",
-  "Database Optimization",
-  "Serverless Functions",
-  "System Architecture",
-  "CI/CD Implementation"
+  {
+    title: "API Design & Integration",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "Event-Driven Architecture",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "Cloud Infrastructure",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "Authentication Systems",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "Database Optimization",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "Serverless Functions",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "System Architecture",
+    icon: <Code className="text-purple-400" size={20} />
+  },
+  {
+    title: "CI/CD Implementation",
+    icon: <Code className="text-purple-400" size={20} />
+  }
 ];
 
 const ExpertiseSection = () => {
@@ -28,12 +53,17 @@ const ExpertiseSection = () => {
           We implement modern tools end-to-end with technical precision and deep expertise.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {expertiseItems.map((item, i) => (
-          <div key={i} className="flex items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-purple-400 mr-3 opacity-70" />
-            <span className="text-zinc-300 text-sm font-mono">{item}</span>
-          </div>
+          <Card key={i} className="premium-card group">
+            <CardHeader className="pb-2">
+              {item.icon}
+              <CardTitle className="text-white text-base font-medium mt-3">
+                {item.title}
+              </CardTitle>
+            </CardHeader>
+          </Card>
         ))}
       </div>
     </section>
