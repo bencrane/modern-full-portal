@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -140,9 +141,15 @@ const Index = () => {
 
       {/* Our Approach Section */}
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-gradient-purple mb-8">
-          Our Approach
-        </h2>
+        <div className="mb-16 space-y-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800/50 text-xs font-mono text-zinc-400">
+            <Code size={14} className="mr-2 text-purple-400" />
+            Our Philosophy
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gradient-purple">
+            Our Approach
+          </h2>
+        </div>
         <div className="space-y-6 max-w-3xl">
           <p className="text-zinc-300 leading-relaxed">
             We don't dabble. We implement.
@@ -173,8 +180,12 @@ const Index = () => {
 
       {/* Technical Expertise */}
       <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gradient-purple mb-4">
+        <div className="mb-16 space-y-4">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800/50 text-xs font-mono text-zinc-400">
+            <Terminal size={14} className="mr-2 text-purple-400" />
+            Capabilities
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gradient-purple">
             Technical Expertise
           </h2>
           <p className="text-sm text-zinc-400 max-w-lg">
