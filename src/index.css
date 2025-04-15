@@ -6,32 +6,32 @@
 @layer base {
   :root {
     --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --foreground: 240 5% 95%;
     
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 240 10% 4.9%;
+    --card-foreground: 240 5% 95%;
     
     --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 240 5% 95%;
     
-    --primary: 267 100% 75%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 267 100% 64%;
+    --primary-foreground: 240 5% 95%;
     
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 95%;
     
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
     
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 5% 95%;
     
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 240 5% 95%;
     
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 267 100% 75%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 267 100% 64%;
   }
 }
 
@@ -52,11 +52,11 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-zinc-100 via-zinc-200/90 to-zinc-300/80 bg-clip-text text-transparent;
   }
   
   .text-gradient-purple {
-    @apply bg-gradient-to-br from-purple-400 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-primary to-primary/80 bg-clip-text text-transparent;
   }
   
   .subtle-border {
@@ -64,7 +64,7 @@
   }
   
   .subtle-glow {
-    @apply shadow-[0_0_15px_rgba(167,139,250,0.1)];
+    @apply shadow-[0_0_15px_rgba(123,71,255,0.1)];
   }
   
   .premium-card {
@@ -72,6 +72,7 @@
   }
 
   .premium-button {
-    @apply bg-zinc-800 hover:bg-zinc-700 border border-zinc-700/50 transition-all duration-300 text-white;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300;
   }
 }
+
