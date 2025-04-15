@@ -16,6 +16,7 @@ const expertiseItems = [
 const ExpertiseSection = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-24">
+      {/* Header Section */}
       <div className="mb-16 space-y-4">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400">
           <Terminal size={14} className="mr-2 text-purple-400" />
@@ -28,15 +29,16 @@ const ExpertiseSection = () => {
           We implement modern tools end-to-end with technical precision and deep expertise.
         </p>
       </div>
-      
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      {/* Grid Section */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
         {expertiseItems.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-4 bg-zinc-900 border border-zinc-700 hover:border-purple-400 rounded-md text-center"
+            className="flex flex-col items-center p-6 bg-zinc-900 border border-zinc-700 rounded-lg text-center hover:shadow-lg transition shadow-sm"
           >
-            <div className="text-purple-400 mb-2">◇</div>
-            <h3 className="text-white text-sm font-medium">{item}</h3>
+            <div className="text-purple-400 text-lg mb-4">◇</div>
+            <div className="text-white text-sm font-medium">{item}</div>
           </div>
         ))}
       </div>
