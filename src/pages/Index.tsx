@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -211,8 +210,10 @@ const Index = () => {
         </div>
       </section>
 
+      <Separator className="bg-zinc-800/50 max-w-7xl mx-auto" />
+
       {/* Clients Section */}
-      <section className="max-w-7xl mx-auto px-6 py-16">
+      <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-8">
           <p className="text-xs uppercase tracking-wider text-zinc-500 font-mono">Trusted By Industry Leaders</p>
         </div>
