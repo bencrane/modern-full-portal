@@ -1,48 +1,40 @@
 
 import React from 'react';
-import { Terminal, Code } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Terminal } from 'lucide-react';
 
+// Note how the actual rendered items have diamond symbols
 const expertiseItems = [
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "API Design & Integration",
-    description: "Connect systems and services through well-structured APIs."
+    icon: "◇" // Using a diamond character that matches what's in your screenshot
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "Event-Driven Architecture",
-    description: "Build reactive systems that respond to business events."
+    icon: "◇" 
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "Cloud Infrastructure",
-    description: "Design and implement scalable cloud-based solutions."
+    icon: "◇"
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "Authentication Systems",
-    description: "Secure your applications with robust authentication."
+    icon: "◇"
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "Database Optimization",
-    description: "Enhance performance and reliability of your data storage."
+    icon: "◇"
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "Serverless Functions",
-    description: "Deploy code without managing underlying infrastructure."
+    icon: "◇"
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "System Architecture",
-    description: "Design comprehensive technical solutions for complex needs."
+    icon: "◇"
   },
   {
-    icon: <Code className="text-purple-400" size={20} />,
     title: "CI/CD Implementation",
-    description: "Automate your build and deployment processes."
+    icon: "◇"
   }
 ];
 
@@ -62,21 +54,14 @@ const ExpertiseSection = () => {
         </p>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {expertiseItems.map((item, index) => (
-          <Card key={index} className="premium-card group">
-            <CardHeader className="pb-2">
-              {item.icon}
-              <CardTitle className="text-white text-lg font-medium mt-3">
-                {item.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-zinc-400 text-sm leading-relaxed">
-                {item.description}
-              </p>
-            </CardContent>
-          </Card>
+          <div key={index} className="bg-zinc-900/50 border border-zinc-800/50 p-4 rounded-md">
+            <div className="text-purple-400 mb-2">{item.icon}</div>
+            <div className="text-white text-sm font-medium">
+              {item.title}
+            </div>
+          </div>
         ))}
       </div>
     </section>
