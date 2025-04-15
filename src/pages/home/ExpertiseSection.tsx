@@ -15,7 +15,7 @@ const expertiseItems = [
 
 const ExpertiseSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
+    <section className="max-w-7xl mx-auto px-6 lg:px-12 py-28">
       {/* Header Section */}
       <div className="mb-16 space-y-4">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-400">
@@ -31,7 +31,7 @@ const ExpertiseSection = () => {
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-8">
         {expertiseItems.map((item, index) => (
           <div
             key={index}
