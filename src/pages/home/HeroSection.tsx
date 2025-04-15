@@ -14,7 +14,9 @@ const HeroSection = () => {
               Modern Tools. Full Implementation.
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-gradient leading-[1.2]">
-              End-to-End Backend Infrastructure Systems
+              End-to-End Backend 
+              <br />
+              Infrastructure Systems
             </h1>
             <p className="text-base text-zinc-400 leading-relaxed max-w-lg">
               We architect and implement comprehensive backend solutions, transforming complex technical challenges into streamlined operational systems. No half measures.
