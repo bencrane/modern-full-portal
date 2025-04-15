@@ -30,8 +30,8 @@ const ExpertiseSection = () => {
         </p>
       </div>
 
-      {/* Responsive Grid Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
+      {/* Two Rows Grid Section - 4 items per row */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
         {expertiseItems.map((item, index) => (
           <div
             key={index}
