@@ -11,7 +11,7 @@ const PhilosophySection = () => {
           Philosophy
         </div>
         <h2 className="text-2xl md:text-3xl font-bold text-gradient-purple">
-          Technical Expertise
+          Our Principles
         </h2>
         <p className="text-sm text-zinc-400 max-w-lg">
           We don't dabble. We implement.
