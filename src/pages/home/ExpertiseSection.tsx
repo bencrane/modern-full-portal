@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Terminal } from 'lucide-react';
 
@@ -29,12 +30,12 @@ const ExpertiseSection = () => {
         </p>
       </div>
 
-      {/* Responsive Grid Section using auto-fit/minmax */}
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8 justify-items-center">
+      {/* Responsive Grid Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
         {expertiseItems.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col items-center p-6 bg-zinc-900 border border-zinc-700 rounded-lg text-center hover:shadow-lg transition shadow-sm"
+            className="flex flex-col items-center p-6 bg-zinc-900 border border-zinc-700 rounded-lg text-center hover:shadow-lg transition shadow-sm w-full"
           >
             <div className="text-purple-400 text-lg mb-4">◇</div>
             <div className="text-white text-sm font-medium">{item}</div>
