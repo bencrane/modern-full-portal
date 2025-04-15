@@ -5,36 +5,44 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const expertiseItems = [
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "API Design & Integration",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Connect systems and services through well-structured APIs."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "Event-Driven Architecture",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Build reactive systems that respond to business events."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "Cloud Infrastructure",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Design and implement scalable cloud-based solutions."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "Authentication Systems",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Secure your applications with robust authentication."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "Database Optimization",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Enhance performance and reliability of your data storage."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "Serverless Functions",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Deploy code without managing underlying infrastructure."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "System Architecture",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Design comprehensive technical solutions for complex needs."
   },
   {
+    icon: <Code className="text-purple-400" size={20} />,
     title: "CI/CD Implementation",
-    icon: <Code className="text-purple-400" size={20} />
+    description: "Automate your build and deployment processes."
   }
 ];
 
@@ -55,14 +63,19 @@ const ExpertiseSection = () => {
       </div>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {expertiseItems.map((item, i) => (
-          <Card key={i} className="premium-card group">
+        {expertiseItems.map((item, index) => (
+          <Card key={index} className="premium-card group">
             <CardHeader className="pb-2">
               {item.icon}
-              <CardTitle className="text-white text-base font-medium mt-3">
+              <CardTitle className="text-white text-lg font-medium mt-3">
                 {item.title}
               </CardTitle>
             </CardHeader>
+            <CardContent>
+              <p className="text-zinc-400 text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </CardContent>
           </Card>
         ))}
       </div>
