@@ -1,6 +1,17 @@
-
 import React from 'react';
-import { Code } from 'lucide-react';
+import { Code, Check } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const approaches = [
+  { 
+    title: "Real business context", 
+    description: "Implementation must serve operational goals, not abstractions." 
+  },
+  { 
+    title: "No half measures", 
+    description: "We own execution end-to-end, not just strategy decks or handoff docs." 
+  }
+];
 
 const ApproachSection = () => {
   return (
@@ -13,30 +24,35 @@ const ApproachSection = () => {
         <h2 className="text-2xl md:text-3xl font-bold text-gradient-purple">
           Our Approach
         </h2>
-      </div>
-      <div className="space-y-6 max-w-3xl">
-        <p className="text-zinc-300 leading-relaxed">
+        <p className="text-sm text-zinc-400 max-w-lg">
           We don't dabble. We implement.
         </p>
-        <p className="text-zinc-400 leading-relaxed">
-          ModernFull exists to architect and operationalize the backend systems that power serious businesses. We specialize in stitching together modern tools into fully integrated systems that actually run — at scale, and in production.
-        </p>
-        <div className="space-y-4">
-          <p className="text-zinc-300 leading-relaxed">Our ethos is grounded in two principles:</p>
-          <ul className="space-y-3 text-zinc-400">
-            <li className="flex items-start">
-              <span className="text-zinc-500 mr-2">•</span>
-              <span><span className="text-zinc-300">Real business context</span> — implementation must serve operational goals, not abstractions.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-zinc-500 mr-2">•</span>
-              <span><span className="text-zinc-300">No half measures</span> — we own execution end-to-end, not just strategy decks or handoff docs.</span>
-            </li>
-          </ul>
-        </div>
-        <p className="text-zinc-400 leading-relaxed">
-          Whether it's building a CRM enrichment layer, automating proposal generation, or deploying a CI/CD pipeline, we don't just wire tools together — we build infrastructure that holds.
-        </p>
+      </div>
+
+      <div className="mb-8 text-zinc-400 leading-relaxed">
+        ModernFull exists to architect and operationalize the backend systems that power serious businesses. We specialize in stitching together modern tools into fully integrated systems that actually run — at scale, and in production.
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-6">
+        {approaches.map((approach, index) => (
+          <Card key={index} className="premium-card group">
+            <CardHeader className="pb-2">
+              <Check size={20} className="text-purple-400 mb-2" />
+              <CardTitle className="text-white text-lg font-medium">
+                {approach.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-zinc-400 text-sm leading-relaxed">
+                {approach.description}
+              </p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+
+      <div className="mt-8 text-zinc-400 leading-relaxed">
+        Whether it's building a CRM enrichment layer, automating proposal generation, or deploying a CI/CD pipeline, we don't just wire tools together — we build infrastructure that holds.
       </div>
     </section>
   );

@@ -6,7 +6,6 @@ import HeroSection from './home/HeroSection';
 import ServicesSection from './home/ServicesSection';
 import ApproachSection from './home/ApproachSection';
 import ExpertiseSection from './home/ExpertiseSection';
-import PhilosophySection from './home/PhilosophySection';
 import ClientsSection from './home/ClientsSection';
 import Footer from './home/Footer';
 
@@ -21,8 +20,6 @@ const Index = () => {
       <ApproachSection />
       <Separator className="bg-zinc-800/50 max-w-7xl mx-auto" />
       <ExpertiseSection />
-      <Separator className="bg-zinc-800/50 max-w-7xl mx-auto" />
-      <PhilosophySection />
       <Separator className="bg-zinc-800/50 max-w-7xl mx-auto" />
       <ClientsSection />
       <Footer />
