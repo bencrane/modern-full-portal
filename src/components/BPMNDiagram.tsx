@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Database, Server, CircuitBoard } from 'lucide-react';
 
 const BPMNDiagram = () => {
   return (
@@ -14,116 +15,113 @@ const BPMNDiagram = () => {
           <stop offset="0%" style={{ stopColor: '#18181b', stopOpacity: 0.8 }} />
           <stop offset="100%" style={{ stopColor: '#18181b', stopOpacity: 0.95 }} />
         </linearGradient>
-        
-        {/* Arrow marker definition */}
-        <marker
-          id="arrowhead"
-          markerWidth="10"
-          markerHeight="7"
-          refX="9"
-          refY="3.5"
-          orient="auto"
-        >
-          <polygon
-            points="0 0, 10 3.5, 0 7"
-            className="fill-purple-500/30"
-          />
-        </marker>
+
+        {/* Connector line gradient */}
+        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style={{ stopColor: '#9333ea', stopOpacity: 0.1 }} />
+          <stop offset="50%" style={{ stopColor: '#9333ea', stopOpacity: 0.3 }} />
+          <stop offset="100%" style={{ stopColor: '#9333ea', stopOpacity: 0.1 }} />
+        </linearGradient>
+
+        {/* Glow filter for hover effects */}
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+          <feMerge>
+            <feMergeNode in="coloredBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
       </defs>
-      
-      <g className="diagram-elements">
-        {/* Connecting lines with gradient and arrows */}
+
+      {/* Infrastructure Elements */}
+      <g className="infrastructure-elements">
+        {/* Center Server Stack */}
+        <g transform="translate(360, 100)">
+          <rect 
+            width="80" 
+            height="100" 
+            rx="4"
+            className="fill-zinc-900 stroke-purple-500/30"
+            strokeWidth="2"
+          />
+          <rect 
+            y="20" 
+            width="80" 
+            height="20"
+            className="fill-purple-500/10 stroke-purple-500/30"
+            strokeWidth="1"
+          />
+          <rect 
+            y="50" 
+            width="80" 
+            height="20"
+            className="fill-purple-500/10 stroke-purple-500/30"
+            strokeWidth="1"
+          />
+        </g>
+
+        {/* Left Database Cluster */}
+        <g transform="translate(200, 120)">
+          <path 
+            d="M 0,15 C 0,5 40,5 40,15 L 40,45 C 40,55 0,55 0,45 Z" 
+            className="fill-zinc-900 stroke-purple-500/30"
+            strokeWidth="2"
+          />
+          <path 
+            d="M 0,15 C 0,25 40,25 40,15" 
+            className="fill-none stroke-purple-500/30"
+            strokeWidth="2"
+          />
+        </g>
+
+        {/* Right Circuit Board */}
+        <g transform="translate(520, 120)">
+          <rect 
+            width="60" 
+            height="60" 
+            rx="2"
+            className="fill-zinc-900 stroke-purple-500/30"
+            strokeWidth="2"
+          />
+          <path 
+            d="M 10,10 H 50 M 10,30 H 50 M 10,50 H 50 M 10,10 V 50 M 30,10 V 50" 
+            className="stroke-purple-500/30"
+            strokeWidth="1"
+          />
+        </g>
+
+        {/* Connecting Lines */}
         <path 
-          d="M 60 150 L 140 150 L 260 150 L 340 150 L 420 150 M 420 150 L 480 100 M 420 150 L 480 200 M 480 100 L 580 100 M 480 200 L 580 200 M 580 100 L 640 150 M 580 200 L 640 150 M 640 150 L 720 150" 
+          d="M 240,150 H 360 M 440,150 H 520" 
           className="stroke-purple-500/30"
           strokeWidth="2"
-          fill="none"
-          markerEnd="url(#arrowhead)"
-        />
-        
-        {/* Start Event */}
-        <circle 
-          cx="60" 
-          cy="150" 
-          r="20" 
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="60" y="180" className="fill-zinc-500 text-xs" textAnchor="middle">Start</text>
-        
-        {/* Task 1: Receive Request */}
-        <rect 
-          x="140" 
-          y="130" 
-          width="120" 
-          height="40" 
-          rx="6"
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="200" y="155" className="fill-zinc-400 text-xs" textAnchor="middle">Receive Request</text>
-        
-        {/* Task 2: Validate Data */}
-        <rect 
-          x="300" 
-          y="130" 
-          width="120" 
-          height="40" 
-          rx="6"
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="360" y="155" className="fill-zinc-400 text-xs" textAnchor="middle">Validate Data</text>
-        
-        {/* Gateway (Decision) */}
-        <path 
-          d="M 420 150 L 450 120 L 480 150 L 450 180 Z" 
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="450" y="110" className="fill-zinc-500 text-xs" textAnchor="middle">Check Path</text>
-        
-        {/* Task A1: Transform Data */}
-        <rect 
-          x="480" 
-          y="80" 
-          width="100" 
-          height="40" 
-          rx="6"
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="530" y="105" className="fill-zinc-400 text-xs" textAnchor="middle">Transform Data</text>
-        
-        {/* Task B1: Notify Service */}
-        <rect 
-          x="480" 
-          y="180" 
-          width="100" 
-          height="40" 
-          rx="6"
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="530" y="205" className="fill-zinc-400 text-xs" textAnchor="middle">Notify Service</text>
-        
-        {/* Merge Gateway */}
-        <path 
-          d="M 610 150 L 640 120 L 670 150 L 640 180 Z" 
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="640" y="110" className="fill-zinc-500 text-xs" textAnchor="middle">Merge</text>
-        
-        {/* End Event */}
-        <circle 
-          cx="720" 
-          cy="150" 
-          r="20" 
-          className="stroke-purple-500/30 fill-zinc-900"
-          strokeWidth="2"
-        />
-        <text x="720" y="180" className="fill-zinc-500 text-xs" textAnchor="middle">End</text>
+          strokeDasharray="4 4"
+        >
+          <animate 
+            attributeName="stroke-dashoffset" 
+            from="8" 
+            to="0" 
+            dur="2s" 
+            repeatCount="indefinite"
+          />
+        </path>
+
+        {/* Data Flow Particles */}
+        <circle className="fill-purple-400" r="2">
+          <animateMotion 
+            path="M 240,150 H 520" 
+            dur="3s" 
+            repeatCount="indefinite"
+          />
+        </circle>
+        <circle className="fill-purple-400" r="2">
+          <animateMotion 
+            path="M 240,150 H 520" 
+            dur="3s" 
+            begin="1.5s"
+            repeatCount="indefinite"
+          />
+        </circle>
       </g>
     </svg>
   );
