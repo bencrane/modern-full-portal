@@ -35,8 +35,40 @@ const BPMNDiagram = () => {
 
       {/* Infrastructure Elements */}
       <g className="infrastructure-elements">
+        {/* Left Database Cluster */}
+        <g transform="translate(120, 120)">
+          <path 
+            d="M 0,15 C 0,5 40,5 40,15 L 40,45 C 40,55 0,55 0,45 Z" 
+            className="fill-zinc-900 stroke-purple-500/30"
+            strokeWidth="2"
+          />
+          <path 
+            d="M 0,15 C 0,25 40,25 40,15" 
+            className="fill-none stroke-purple-500/30"
+            strokeWidth="2"
+          />
+        </g>
+
+        {/* Processing Unit 1 */}
+        <g transform="translate(220, 100)">
+          <rect 
+            width="60" 
+            height="80" 
+            rx="4"
+            className="fill-zinc-900 stroke-purple-500/30"
+            strokeWidth="2"
+          />
+          <rect 
+            y="20" 
+            width="60" 
+            height="15"
+            className="fill-purple-500/10 stroke-purple-500/30"
+            strokeWidth="1"
+          />
+        </g>
+
         {/* Center Server Stack */}
-        <g transform="translate(360, 100)">
+        <g transform="translate(340, 90)">
           <rect 
             width="80" 
             height="100" 
@@ -60,31 +92,35 @@ const BPMNDiagram = () => {
           />
         </g>
 
-        {/* Left Database Cluster */}
-        <g transform="translate(200, 120)">
-          <path 
-            d="M 0,15 C 0,5 40,5 40,15 L 40,45 C 40,55 0,55 0,45 Z" 
+        {/* Processing Unit 2 */}
+        <g transform="translate(480, 100)">
+          <rect 
+            width="60" 
+            height="80" 
+            rx="4"
             className="fill-zinc-900 stroke-purple-500/30"
             strokeWidth="2"
           />
-          <path 
-            d="M 0,15 C 0,25 40,25 40,15" 
-            className="fill-none stroke-purple-500/30"
-            strokeWidth="2"
+          <rect 
+            y="40" 
+            width="60" 
+            height="15"
+            className="fill-purple-500/10 stroke-purple-500/30"
+            strokeWidth="1"
           />
         </g>
 
         {/* Right Circuit Board */}
-        <g transform="translate(520, 120)">
+        <g transform="translate(600, 110)">
           <rect 
-            width="60" 
+            width="80" 
             height="60" 
             rx="2"
             className="fill-zinc-900 stroke-purple-500/30"
             strokeWidth="2"
           />
           <path 
-            d="M 10,10 H 50 M 10,30 H 50 M 10,50 H 50 M 10,10 V 50 M 30,10 V 50" 
+            d="M 10,10 H 70 M 10,30 H 70 M 10,50 H 70 M 10,10 V 50 M 30,10 V 50 M 50,10 V 50" 
             className="stroke-purple-500/30"
             strokeWidth="1"
           />
@@ -92,7 +128,7 @@ const BPMNDiagram = () => {
 
         {/* Connecting Lines */}
         <path 
-          d="M 240,150 H 360 M 440,150 H 520" 
+          d="M 160,140 H 220 M 280,140 H 340 M 420,140 H 480 M 540,140 H 600" 
           className="stroke-purple-500/30"
           strokeWidth="2"
           strokeDasharray="4 4"
@@ -107,21 +143,16 @@ const BPMNDiagram = () => {
         </path>
 
         {/* Data Flow Particles */}
-        <circle className="fill-purple-400" r="2">
-          <animateMotion 
-            path="M 240,150 H 520" 
-            dur="3s" 
-            repeatCount="indefinite"
-          />
-        </circle>
-        <circle className="fill-purple-400" r="2">
-          <animateMotion 
-            path="M 240,150 H 520" 
-            dur="3s" 
-            begin="1.5s"
-            repeatCount="indefinite"
-          />
-        </circle>
+        {[0, 1, 2, 3].map((index) => (
+          <circle key={index} className="fill-purple-400" r="2">
+            <animateMotion 
+              path="M 160,140 H 600" 
+              dur="3s" 
+              begin={`${index * 0.75}s`}
+              repeatCount="indefinite"
+            />
+          </circle>
+        ))}
       </g>
     </svg>
   );
