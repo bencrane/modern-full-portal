@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Terminal, ServerCog, ArrowRight } from 'lucide-react';
+import { Terminal, ArrowRight } from 'lucide-react';
+import BPMNDiagram from '@/components/BPMNDiagram';
 
 const HeroSection = () => {
   const scrollToSolutions = () => {
@@ -44,17 +44,8 @@ const HeroSection = () => {
           <div className="hidden lg:block">
             <div className="premium-card p-8 h-[400px] relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 to-transparent" />
-              <div className="relative z-10">
-                <ServerCog size={32} className="text-purple-400/70 mb-6" />
-                <div className="font-mono text-xs text-zinc-500 space-y-4">
-                  <div>Infrastructure Diagram</div>
-                  <div className="grid grid-cols-3 gap-2">
-                    {[...Array(9)].map((_, i) => (
-                      <div key={i} className="bg-zinc-800/50 h-3 rounded" />
-                    ))}
-                  </div>
-                  <div className="text-[10px] opacity-70">system-architecture.config</div>
-                </div>
+              <div className="relative z-10 h-full">
+                <BPMNDiagram />
               </div>
             </div>
           </div>
