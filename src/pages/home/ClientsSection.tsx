@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const logos = [
@@ -30,8 +31,8 @@ const logos = [
 const ClientsSection = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
-      <div className="text-center mb-12">
-        <p className="text-xs uppercase tracking-wider text-zinc-500 font-mono text-center">
+      <div className="flex justify-center w-full mb-12">
+        <p className="text-xs uppercase tracking-wider text-zinc-500 font-mono text-center w-full">
           Unlocking Opportunities With Industry Leaders
         </p>
       </div>
