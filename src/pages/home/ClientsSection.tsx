@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
 const logos = [
   { url: 'https://logo.clearbit.com/oracle.com', name: 'Oracle' },
@@ -34,56 +33,48 @@ const ClientsSection = () => {
     <section className="max-w-7xl mx-auto px-6 py-24 overflow-hidden">
       <div className="text-center mb-12">
         <p className="text-xs uppercase tracking-wider text-zinc-500 font-mono">
-          Unlocking Opportunities for Industry Leaders
+          Unlocking Opportunities With Industry Leaders
         </p>
       </div>
       
       <div className="relative">
-        <div className="w-full overflow-hidden">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-              dragFree: true,
-              containScroll: false,
-            }}
-            className="w-full cursor-grab active:cursor-grabbing"
-          >
-            <CarouselContent className="animate-scroll hover:pause">
-              {[...logos, ...logos].map((logo, index) => (
-                <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/6 pl-4">
-                  <div className="relative group h-24 flex items-center justify-center">
-                    <img
-                      src={logo.url}
-                      alt={logo.name}
-                      className="max-h-12 w-auto object-contain transition-all duration-300 filter grayscale group-hover:grayscale-0 group-hover:scale-110"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+        <div className="flex gap-x-12 animate-marquee hover:pause">
+          {[...logos, ...logos].map((logo, index) => (
+            <div 
+              key={index} 
+              className="flex-none h-24 flex items-center justify-center"
+            >
+              <img
+                src={logo.url}
+                alt={logo.name}
+                className="h-12 w-auto object-contain transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110"
+              />
+            </div>
+          ))}
         </div>
       </div>
-      
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
+
+      <style>
+        {`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
           }
-          100% {
-            transform: translateX(calc(-100% + 100vw));
+          
+          .animate-marquee {
+            display: flex;
+            animation: marquee 40s linear infinite;
+            white-space: nowrap;
           }
-        }
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
-        }
-        .pause {
-          animation-play-state: paused;
-        }
-      `}</style>
+          
+          .pause {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
     </section>
   );
 };
 
 export default ClientsSection;
+
