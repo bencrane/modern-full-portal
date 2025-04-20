@@ -7,6 +7,7 @@ import ServicesSection from './home/ServicesSection';
 import ApproachSection from './home/ApproachSection';
 import ExpertiseSection from './home/ExpertiseSection';
 import ClientsSection from './home/ClientsSection';
+import CallToActionSection from './home/CallToActionSection';
 import Footer from './home/Footer';
 
 const Index = () => {
@@ -22,6 +23,8 @@ const Index = () => {
       <ExpertiseSection />
       <Separator className="bg-zinc-800/50 max-w-7xl mx-auto" />
       <ClientsSection />
+      <Separator className="bg-zinc-800/50 max-w-7xl mx-auto" />
+      <CallToActionSection />
       <Footer />
     </div>
   );
