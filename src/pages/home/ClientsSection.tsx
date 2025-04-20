@@ -3,13 +3,13 @@ import React from 'react';
 
 const ClientsSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
-      <div className="text-center mb-8">
-        <p className="text-xs uppercase tracking-wider text-zinc-500 font-mono">Trusted By Industry Leaders</p>
+    <section className="max-w-7xl mx-auto px-6 py-32">
+      <div className="text-center mb-12">
+        <p className="text-sm uppercase tracking-[0.2em] text-white font-mono">Trusted By Industry Leaders</p>
       </div>
-      <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
+      <div className="flex flex-wrap justify-center items-center gap-12">
         {['Nostra', 'Landed', 'SecurityPal', 'Civic'].map((client, i) => (
-          <div key={i} className="text-zinc-500 font-mono text-xs">{client}</div>
+          <div key={i} className="text-[#B0B0B0] font-mono text-base">{client}</div>
         ))}
       </div>
     </section>
