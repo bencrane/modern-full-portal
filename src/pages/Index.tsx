@@ -6,7 +6,7 @@ import HeroSection from './home/HeroSection';
 import ServicesSection from './home/ServicesSection';
 import ApproachSection from './home/ApproachSection';
 import ExpertiseSection from './home/ExpertiseSection';
-import ClientsSection from '@/components/home/ClientsSection';
+import ClientsSection from './home/ClientsSection';
 import Footer from './home/Footer';
 
 const Index = () => {
