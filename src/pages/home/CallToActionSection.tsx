@@ -5,9 +5,9 @@ import { ArrowRight } from 'lucide-react';
 
 const CallToActionSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
-      <div className="space-y-8">
-        <h2 className="text-4xl font-bold tracking-tight text-gradient leading-[1.2]">
+    <section className="max-w-7xl mx-auto px-6 py-24 text-center">
+      <div className="flex flex-col items-center space-y-8">
+        <h2 className="text-4xl font-bold tracking-tight text-gradient leading-[1.2] max-w-2xl">
           Let's Deploy Systems That Work
         </h2>
         <p className="text-base text-zinc-400 leading-relaxed max-w-lg">
