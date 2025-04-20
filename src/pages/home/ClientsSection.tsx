@@ -8,7 +8,7 @@ const ClientsSection = () => {
         <p className="text-xs uppercase tracking-wider text-zinc-500 font-mono">Trusted By Industry Leaders</p>
       </div>
       <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
-        {['Enterprise A', 'Enterprise B', 'Enterprise C', 'Enterprise D'].map((client, i) => (
+        {['Nostra', 'Landed', 'SecurityPal', 'Civic'].map((client, i) => (
           <div key={i} className="text-zinc-500 font-mono text-xs">{client}</div>
         ))}
       </div>
