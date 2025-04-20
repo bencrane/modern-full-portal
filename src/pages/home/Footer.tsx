@@ -5,11 +5,11 @@ const Footer = () => {
   return (
     <footer className="mt-auto border-t border-zinc-800/50">
       <div className="max-w-7xl mx-auto px-6 py-8">
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-zinc-500 text-xs font-mono">
             © 2025 Modern Full, LLC
           </div>
-          <div className="text-zinc-500 text-xs font-mono">
+          <div className="text-zinc-500 text-xs font-mono text-center">
             Modern Tools. Full Implementation.
           </div>
           <div>
@@ -25,3 +25,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
