@@ -5,9 +5,9 @@ const ProposalE30c2203 = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [drawing, setDrawing] = useState(false);
   const [hasSigned, setHasSigned] = useState(false);
-  const [firstName, setFirstName] = useState('Max');
-  const [lastName, setLastName] = useState('Hirsch');
-  const [email, setEmail] = useState('maxhirsch15@gmail.com');
+  const [firstName, setFirstName] = useState('Benjamin');
+  const [lastName, setLastName] = useState('Crane');
+  const [email, setEmail] = useState('benjaminjcrane@gmail.com');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
