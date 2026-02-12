@@ -31,21 +31,62 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="hidden lg:block">
-            <div className="premium-card p-8 h-[400px] relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 to-transparent" />
-              <div className="relative z-10">
-                <ServerCog size={32} className="text-purple-400/70 mb-6" />
-                <div className="font-mono text-xs text-zinc-500 space-y-4">
-                  <div>Infrastructure Diagram</div>
-                  <div className="grid grid-cols-3 gap-2">
-                    {[...Array(9)].map((_, i) => (
-                      <div key={i} className="bg-zinc-800/50 h-3 rounded" />
-                    ))}
-                  </div>
-                  <div className="text-[10px] opacity-70">system-architecture.config</div>
-                </div>
-              </div>
-            </div>
+            <div className="premium-card p-8 h-[400px] relative overflow-hidden flex items-center justify-center">
+              {/* Animated Infrastructure Pipeline */}
+              <svg viewBox="0 0 400 200" className="w-full h-auto max-w-md">
+                {/* Connection lines */}
+                <line x1="60" y1="100" x2="120" y2="100" stroke="#6C3AED" strokeWidth="1" strokeDasharray="4 4" className="animate-pulse" />
+                <line x1="160" y1="100" x2="220" y2="100" stroke="#6C3AED" strokeWidth="1" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '0.2s' }} />
+                <line x1="260" y1="100" x2="320" y2="100" stroke="#6C3AED" strokeWidth="1" strokeDasharray="4 4" className="animate-pulse" style={{ animationDelay: '0.4s' }} />
+
+                {/* Node 1: Database */}
+                <g className="animate-pulse">
+                  <ellipse cx="40" cy="85" rx="20" ry="10" fill="none" stroke="#6C3AED" strokeWidth="1.5" />
+                  <path d="M20 85 L20 115 Q40 128 60 115 L60 85" fill="none" stroke="#6C3AED" strokeWidth="1.5" />
+                  <ellipse cx="40" cy="115" rx="20" ry="10" fill="none" stroke="#6C3AED" strokeWidth="1.5" />
+                </g>
+                <text x="40" y="145" textAnchor="middle" className="fill-zinc-500 text-[8px] font-mono">Source</text>
+
+                {/* Node 2: Processing */}
+                <g style={{ animationDelay: '0.15s' }} className="animate-pulse">
+                  <rect x="120" y="80" width="40" height="40" rx="4" fill="none" stroke="#6C3AED" strokeWidth="1.5" />
+                  <line x1="128" y1="92" x2="152" y2="92" stroke="#6C3AED" strokeWidth="1" opacity="0.5" />
+                  <line x1="128" y1="100" x2="152" y2="100" stroke="#6C3AED" strokeWidth="1" opacity="0.5" />
+                  <line x1="128" y1="108" x2="152" y2="108" stroke="#6C3AED" strokeWidth="1" opacity="0.5" />
+                </g>
+                <text x="140" y="145" textAnchor="middle" className="fill-zinc-500 text-[8px] font-mono">Process</text>
+
+                {/* Node 3: Central Hub */}
+                <g style={{ animationDelay: '0.3s' }} className="animate-pulse">
+                  <rect x="220" y="75" width="50" height="50" rx="6" fill="none" stroke="#8B5CF6" strokeWidth="2" />
+                  <circle cx="245" cy="100" r="4" fill="#8B5CF6" opacity="0.6" />
+                  <circle cx="245" cy="100" r="12" fill="none" stroke="#8B5CF6" strokeWidth="1" opacity="0.4" />
+                </g>
+                <text x="245" y="145" textAnchor="middle" className="fill-zinc-500 text-[8px] font-mono">Hub</text>
+
+                {/* Node 4: Output */}
+                <g style={{ animationDelay: '0.45s' }} className="animate-pulse">
+                  <rect x="320" y="80" width="40" height="40" rx="4" fill="none" stroke="#6C3AED" strokeWidth="1.5" />
+                  <path d="M330 95 L350 95 M330 100 L345 100 M330 105 L350 105" stroke="#6C3AED" strokeWidth="1" opacity="0.5" />
+                </g>
+                <text x="340" y="145" textAnchor="middle" className="fill-zinc-500 text-[8px] font-mono">Deploy</text>
+
+                {/* Floating particles */}
+                <circle cx="90" cy="100" r="2" fill="#8B5CF6" opacity="0.8">
+                  <animate attributeName="cx" values="60;120" dur="2s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="190" cy="100" r="2" fill="#8B5CF6" opacity="0.8">
+                  <animate attributeName="cx" values="160;220" dur="2s" repeatCount="indefinite" begin="0.5s" />
+                  <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="0.5s" />
+                </circle>
+                <circle cx="290" cy="100" r="2" fill="#8B5CF6" opacity="0.8">
+                  <animate attributeName="cx" values="260;320" dur="2s" repeatCount="indefinite" begin="1s" />
+                  <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" begin="1s" />
+                </circle>
+              </svg>
+
+                          </div>
           </div>
         </div>
       </div>
