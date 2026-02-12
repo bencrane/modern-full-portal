@@ -266,14 +266,14 @@ const ProposalE30c2203 = () => {
                 placeholder="First name"
                 value={firstName}
                 readOnly
-                style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
+                style={{ flex: 1, background: 'rgba(255,255,255,0.02)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text-muted)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
               />
               <input
                 type="text"
                 placeholder="Last name"
                 value={lastName}
                 readOnly
-                style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
+                style={{ flex: 1, background: 'rgba(255,255,255,0.02)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text-muted)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
               />
             </div>
             <input
@@ -281,7 +281,7 @@ const ProposalE30c2203 = () => {
               placeholder="Email address"
               value={email}
               readOnly
-              style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
+              style={{ width: '100%', background: 'rgba(255,255,255,0.02)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text-muted)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
             />
             <p style={{ fontSize: 12, color: 'var(--text-dim)', marginTop: 10 }}>A copy of this signed agreement will be sent to the email provided.</p>
           </div>
