@@ -304,8 +304,8 @@ const ProposalE30c2203 = () => {
               </button>
               <button
                 onClick={submitSig}
-                disabled={isSubmitting}
-                style={{ background: '#333', border: 'none', color: 'var(--text)', fontSize: 14, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", padding: '12px 28px', borderRadius: 10, cursor: 'pointer', opacity: isSubmitting ? 0.6 : 1 }}
+                disabled={isSubmitting || !firstName || !lastName || !email || !hasSigned}
+                style={{ background: '#333', border: 'none', color: 'var(--text)', fontSize: 14, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", padding: '12px 28px', borderRadius: 10, cursor: (!firstName || !lastName || !email || !hasSigned) ? 'not-allowed' : 'pointer', opacity: (isSubmitting || !firstName || !lastName || !email || !hasSigned) ? 0.4 : 1 }}
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>
