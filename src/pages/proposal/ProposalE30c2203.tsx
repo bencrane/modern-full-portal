@@ -5,9 +5,9 @@ const ProposalE30c2203 = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [drawing, setDrawing] = useState(false);
   const [hasSigned, setHasSigned] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
+  const [firstName, setFirstName] = useState('Max');
+  const [lastName, setLastName] = useState('Hirsch');
+  const [email, setEmail] = useState('maxhirsch15@gmail.com');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
@@ -265,23 +265,23 @@ const ProposalE30c2203 = () => {
                 type="text"
                 placeholder="First name"
                 value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none' }}
+                readOnly
+                style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
               />
               <input
                 type="text"
                 placeholder="Last name"
                 value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none' }}
+                readOnly
+                style={{ flex: 1, background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
               />
             </div>
             <input
               type="email"
               placeholder="Email address"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none' }}
+              readOnly
+              style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none', cursor: 'default' }}
             />
             <p style={{ fontSize: 12, color: 'var(--text-dim)', marginTop: 10 }}>A copy of this signed agreement will be sent to the email provided.</p>
           </div>
