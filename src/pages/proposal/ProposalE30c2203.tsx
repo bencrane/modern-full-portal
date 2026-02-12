@@ -249,8 +249,8 @@ const ProposalE30c2203 = () => {
         {/* DISCLOSURE */}
         <div style={{ marginBottom: 36 }}>
           <div style={{ fontSize: 11, textTransform: 'uppercase', letterSpacing: '1.5px', color: 'var(--text-dim)', fontWeight: 600, marginBottom: 16 }}>Disclosure</div>
-          <p style={{ fontSize: 15, color: 'var(--text-muted)', lineHeight: 1.75 }}>
-            Deliverables listed above represent the intended scope and may be adjusted by the provider based on technical feasibility and platform availability. The final system may differ from what is described. 3rd-party platform or API usage will be incurred by the client directly (e.g. Google Gemini, OpenAI, SmartLead).
+          <p style={{ fontSize: 13, color: 'var(--text-muted)', lineHeight: 1.75 }}>
+            Deliverables listed above represent the intended scope and may be adjusted by the provider based on technical feasibility and platform availability. The final system may differ from what is described. Additional 3rd-party platform or API usage will be incurred by the client directly (e.g. Google Gemini, OpenAI, SmartLead).
           </p>
         </div>
 
