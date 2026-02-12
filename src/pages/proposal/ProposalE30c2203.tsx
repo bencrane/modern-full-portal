@@ -211,6 +211,13 @@ const ProposalE30c2203 = () => {
             </ul>
           </div>
 
+          {/* Or divider */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 16, margin: '24px 0' }}>
+            <div style={{ flex: 1, height: 1, background: 'var(--card-border)' }} />
+            <span style={{ fontSize: 13, color: 'var(--text-dim)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '1px' }}>or</span>
+            <div style={{ flex: 1, height: 1, background: 'var(--card-border)' }} />
+          </div>
+
           {/* AI Ad Content Generation System */}
           <div style={{ background: 'var(--card)', border: '1px solid var(--card-border)', borderRadius: 16, padding: 28, marginBottom: 16 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 6 }}>
@@ -275,6 +282,7 @@ const ProposalE30c2203 = () => {
               onChange={(e) => setEmail(e.target.value)}
               style={{ width: '100%', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--card-border)', borderRadius: 8, padding: '12px 14px', color: 'var(--text)', fontFamily: "'DM Sans', sans-serif", fontSize: 14, outline: 'none' }}
             />
+            <p style={{ fontSize: 12, color: 'var(--text-dim)', marginTop: 10 }}>A copy of this signed agreement will be sent to the email provided.</p>
           </div>
 
           <div style={{ background: 'var(--card)', border: '1px solid var(--card-border)', borderRadius: 16, padding: 28, marginBottom: 16 }}>
@@ -312,8 +320,7 @@ const ProposalE30c2203 = () => {
             </div>
           </div>
 
-          <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--text-dim)', marginTop: 20, marginBottom: 8 }}>A copy of this signed agreement will be sent to the email provided.</p>
-          <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--text-muted)', marginBottom: 40 }}>Payment instructions will be presented on the next page.</p>
+          <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--text-muted)', marginTop: 20, marginBottom: 40 }}>Payment instructions will be presented on the next page.</p>
         </div>
 
         <div style={{ height: 60 }} />
