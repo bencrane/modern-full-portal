@@ -103,11 +103,12 @@ const ProposalE30c2203 = () => {
     const payload = {
       signature: signatureData,
       signer_name: signerName,
+      signer_email: email,
       signed_html: signedHtml,
     };
 
     try {
-      const response = await fetch('/api/public/proposals/e30c2203/sign', {
+      const response = await fetch('https://api.serviceengine.xyz/api/public/proposals/e30c2203/sign', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
