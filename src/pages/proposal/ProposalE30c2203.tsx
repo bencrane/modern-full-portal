@@ -118,7 +118,7 @@ const ProposalE30c2203 = () => {
         throw new Error('Failed to submit');
       }
 
-      navigate('/proposal/e30c2203/confirmed');
+      navigate('/proposal/e30c2203/payment-instructions');
     } catch (error) {
       console.error('Submission error:', error);
       alert('There was an error submitting. Please try again.');
