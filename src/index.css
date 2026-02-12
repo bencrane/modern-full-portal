@@ -1,0 +1,78 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 240 5% 95%;
+    
+    --card: 240 10% 4.9%;
+    --card-foreground: 240 5% 95%;
+    
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 240 5% 95%;
+    
+    --primary: 267 100% 64%;
+    --primary-foreground: 240 5% 95%;
+    
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 95%;
+    
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 5% 95%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 240 5% 95%;
+    
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 267 100% 64%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-zinc-900/50 backdrop-blur-sm border border-zinc-800/50;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-br from-zinc-100 via-zinc-200/90 to-zinc-300/80 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-purple {
+    @apply bg-gradient-to-br from-primary to-primary/80 bg-clip-text text-transparent;
+  }
+  
+  .subtle-border {
+    @apply border border-zinc-800/70;
+  }
+  
+  .subtle-glow {
+    @apply shadow-[0_0_15px_rgba(123,71,255,0.1)];
+  }
+  
+  .premium-card {
+    @apply glass-card hover:border-zinc-700/80 hover:bg-zinc-900/60 transition-all duration-300;
+  }
+
+  .premium-button {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-300;
+  }
+}
+
